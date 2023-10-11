@@ -1,17 +1,22 @@
 Algoritmo ejercio_8
-	Definir decumento2,descumento   Como Numerica;
 	Definir costo, Total Como Real;
-	descumento = 12;
-	decumento2 = 10;
 	Escribir 'precio de los articulos ';
 	Leer costo;
-	Si costo>=200 Entonces
-		Total <- ((descumento*costo)/100);
+	Si costo >=200 Entonces
+		Total=(costo - (costo*0.15)); 
 		escribir "Presio total";
 		Escribir  total;
 	SiNo  
-		total =((decumento2 *costo)/100);
-		escribir "Presio total";
-		Escribir  total;
+		si costo > 100 Entonces
+			costo=(costo - (costo*0.12));
+		sino 
+			costo=(costo - (costo*0.10));
+			
+			
+		FinSi
+		
 	FinSi
+	Escribir  "Su valor a pagar es ";
+	Escribir  total;
 FinAlgoritmo
+ 
